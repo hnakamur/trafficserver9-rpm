@@ -133,6 +133,8 @@ find %{buildroot} -type f -name "*.a" -delete
 rm -f %{buildroot}/%{_prefix}/lib/perl5/x86_64-linux-thread-multi/perllocal.pod
 rm -f %{buildroot}/%{_prefix}/lib/perl5/x86_64-linux-thread-multi/auto/Apache/TS/.packlist
 
+rm -f %{buildroot}/%{_libdir}/plugin_*.so
+
 #
 perl -pi -e 's/^CONFIG.*proxy.config.proxy_name STRING.*$/CONFIG proxy.config.proxy_name STRING FIXME.example.com/' \
 	%{buildroot}/etc/trafficserver/records.config
