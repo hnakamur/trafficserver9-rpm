@@ -205,7 +205,7 @@ fi
 %{_bindir}/tspush
 %dir %{_prefix}/lib/trafficserver/modules
 %{_libdir}/libts*.so
-%{_libdir}/libts*.so.8*
+%{_libdir}/libts*.so.9*
 %{_prefix}/lib/trafficserver/modules/*.so
 %if %{?fedora}0 > 140 || %{?rhel}0 > 60
 /lib/systemd/system/trafficserver.service
