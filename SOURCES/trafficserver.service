@@ -1,0 +1,12 @@
+[Unit]
+Description=Apache Traffic Server is a fast, scalable and extensible caching proxy server.
+After=syslog.target network.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/sysconfig/trafficserver
+ExecStart=/usr/bin/traffic_manager $TC_DAEMON_ARGS
+ExecReload=/usr/bin/traffic_ctl config reload
+
+[Install]
+WantedBy=multi-user.target
