@@ -3,7 +3,7 @@
 
 Summary:	Fast, scalable and extensible HTTP/1.1 compliant caching proxy server
 Name:		trafficserver
-Version:	9.0.2
+Version:	9.1.0
 Release:	1%{?dist}
 License:	ASL 2.0
 Group:		System Environment/Daemons
@@ -99,7 +99,6 @@ scl enable devtoolset-7 "./configure \
   --libexecdir=%{_prefix}/lib/trafficserver/modules \
   --with-user=ats --with-group=ats --disable-silent-rules \
   --enable-experimental-plugins --enable-32bit-build \
-  --enable-mime-sanity-check \
   --enable-wccp \
 "
 
@@ -237,6 +236,10 @@ fi
 %{_libdir}/pkgconfig/trafficserver.pc
 
 %changelog
+* Wed Sep  8 2021 Hiroaki Nakamura <hnakamur@gmail.com> 9.1.0-1
+- Update to 9.1.0
+- Disable mime-sanity-check which is usable only in debug build
+
 * Tue Jun 29 2021 Hiroaki Nakamura <hnakamur@gmail.com> 9.0.2-1
 - Update to 9.0.2
 - Use yaml-cpp vendored in lib/yamlcpp
