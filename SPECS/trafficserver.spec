@@ -3,7 +3,7 @@
 
 Summary:	Fast, scalable and extensible HTTP/1.1 compliant caching proxy server
 Name:		trafficserver
-Version:	9.1.0
+Version:	9.1.1
 Release:	1%{?dist}
 License:	ASL 2.0
 Group:		System Environment/Daemons
@@ -236,6 +236,9 @@ fi
 %{_libdir}/pkgconfig/trafficserver.pc
 
 %changelog
+* Wed Nov  3 2021 Hiroaki Nakamura <hnakamur@gmail.com> 9.1.1-1
+- Update to 9.1.1
+
 * Wed Sep  8 2021 Hiroaki Nakamura <hnakamur@gmail.com> 9.1.0-1
 - Update to 9.1.0
 - Disable mime-sanity-check which is usable only in debug build
